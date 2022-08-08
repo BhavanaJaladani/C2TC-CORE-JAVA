@@ -101,28 +101,4 @@ System.out.println("The lock hold count of inner lock: "+ lock.getHoldCount());
             }  
         }  
     }  
-}  
-public class LockExample  
-{  
-     
-    static final int MAX_VAL = 2;  
-    
-    public static void main(String[] args)  
-    {  
-    
-         ReentrantLock lock = new ReentrantLock();  
-         
-         ExecutorService pool = Executors.newFixedThreadPool(MAX_VAL);  
-         Runnable wt1 = new workerThread(lock, "Job1");  
-         Runnable wt2 = new workerThread(lock, "Job2");  
-         Runnable wt3 = new workerThread(lock, "Job3");  
-         Runnable wt4 = new workerThread(lock, "Job4");  
-        
-         pool.execute(wt1);  
-         pool.execute(wt2);  
-         pool.execute(wt3);  
-         pool.execute(wt4);  
-        
-         pool.shutdown();  
-    }
 }

@@ -1,5 +1,4 @@
 package tracker;
-
 interface Drawable{  
     public void draw();  
 }  
@@ -7,14 +6,14 @@ interface Drawable{
 public class Lamda {
 
 	public static void main(String[] args) {
+		 int width=10;  
+         
+	     
+	        Drawable d2=()->{  
+	            System.out.println("Drawing "+width);  
+	        };  
+	        d2.draw();  
 		
-		int width=10;  
-        
-          
-        Drawable d2=()->{  
-            System.out.println("Drawing "+width);  
-        };  
-        d2.draw();  
 
 	}
 
